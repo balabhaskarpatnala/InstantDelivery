@@ -6,7 +6,7 @@ The system consists of three main modules:
 * WPF client application for the company's employees
 * web application for the company's clients (ASP.NET MVC with an AngularJS SPA module)
 
-## Desktop application
+## Desktop application 1
 The desktop app is dedicated to the company's employees who may belong to one of the three following groups:
 * administrative employees - who can manage other employees, their vehicles, add new packages and assign them to couriers
 * couriers - who have access to data of the packages they need to deliver

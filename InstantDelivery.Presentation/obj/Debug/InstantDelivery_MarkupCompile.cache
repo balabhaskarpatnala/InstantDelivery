@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\P0151407\Source\Repos\balabhaskarpatnala\InstantDelivery\InstantDelivery.Presentation\obj\Debug\
+C:\Users\P0151407\Source\Repos\InstantDelivery\InstantDelivery.Presentation\obj\Debug\
 InstantDelivery
 none
 false
 DEBUG;TRACE
-C:\Users\P0151407\Source\Repos\balabhaskarpatnala\InstantDelivery\InstantDelivery.Presentation\App.xaml
+C:\Users\P0151407\Source\Repos\InstantDelivery\InstantDelivery.Presentation\App.xaml
 402128352462
 2-664178954
 44-1538719888
-71209288497
+71-592422584
 Controls\DataPager.xaml;Controls\EmployeesFilterPanel.xaml;Controls\PackagesFilterPanel.xaml;Controls\VehiclesFilterPanel.xaml;Dialogs\ErrorDialogView.xaml;Styles\Dialogs.xaml;Views\AdministratorShellView.xaml;Views\AdministratorView\ChangeUserRoleView.xaml;Views\AdministratorView\ManageUsersGroupsView.xaml;Views\ChangePasswordView.xaml;Views\CourierShellView.xaml;Views\CourierView\CourierPackagesMapView.xaml;Views\CourierView\ShowCourierPackagesView.xaml;Views\CourierView\ShowCourierProfileView.xaml;Views\LoginView.xaml;Resources\Icons.xaml;Styles\Common.xaml;Styles\Employees.xaml;Styles\Packages.xaml;Styles\Vehicles.xaml;Views\EmployeesView\EmployeeAddView.xaml;Views\ConfirmDeleteView.xaml;Views\EmployeesView\EmployeeEditView.xaml;Views\EmployeesView\EmployeeUsedVehiclesDetailsView.xaml;Views\EmployeesView\EmployeesManagedPackagesView.xaml;Views\EmployeesView\EmployeesUsedVehiclesView.xaml;Views\EmployeesView\EmployeesView.xaml;Views\PackagesView\GeneralPackagesView.xaml;Views\PackagesView\PackageAddView.xaml;Views\PackagesView\PackageEditView.xaml;Views\EmployeeShellView.xaml;Views\ShellView.xaml;Views\StartView.xaml;Views\StatisticsView\FinancialStatisticsView.xaml;Views\StatisticsView\GeneralStatisticsView.xaml;Views\VehiclesViews\SelectVehicleForEmployeeView.xaml;Views\VehiclesViews\VehicleEditView.xaml;Views\VehiclesViews\VehicleManageView.xaml;Views\VehiclesViews\VehiclesAddView.xaml;Views\VehiclesViews\VehiclesGeneralView.xaml;
 
 True
