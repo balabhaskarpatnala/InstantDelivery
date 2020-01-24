@@ -12,7 +12,7 @@ The desktop app is dedicated to the company's employees who may belong to one of
 * couriers - who have access to data of the packages they need to deliver
 * administrators - who can manage user accounts
 
-## Web application s
+## Web application
 The web app is dedicated to the company's clients and consists of the main website providing general information and package tracking capabilities and a SPA module for logged in users. The main features of the portal include:
 * sending packages
 * viewing and showing statistics of sent packages
