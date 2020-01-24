@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="InstantDelivery.Views.PackageAddView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:cal="http://www.caliburnproject.org"
+             Background="White">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Waga:" Grid.Column="0" Grid.Row="0"  Style="{StaticResource EditDialogLabel}" />
+        <TextBox cal:Message.Attach="[Event TextChanged] = [Action RefreshCost()]" Grid.Column="1" Grid.Row="0" x:Name="NewPackage_Weight" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Wysokość:" Grid.Column="0" Grid.Row="1"  Style="{StaticResource EditDialogLabel}"  />
+        <TextBox cal:Message.Attach="[Event TextChanged] = [Action RefreshCost()]" Grid.Column="1" Grid.Row="1" x:Name="NewPackage_Height" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Szerokość:" Grid.Column="0" Grid.Row="2"  Style="{StaticResource EditDialogLabel}"  />
+        <TextBox cal:Message.Attach="[Event TextChanged] = [Action RefreshCost()]" Grid.Column="1" Grid.Row="2" x:Name="NewPackage_Width" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Długość:" Grid.Column="0" Grid.Row="3"  Style="{StaticResource EditDialogLabel}"  />
+        <TextBox cal:Message.Attach="[Event TextChanged] = [Action RefreshCost()]" Grid.Column="1" Grid.Row="3" x:Name="NewPackage_Length" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Koszt:" Grid.Column="0" Grid.Row="5" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox IsReadOnly="True" Grid.Column="1" Grid.Row="5" x:Name="Cost" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Kraj:" Grid.Column="0" Grid.Row="6" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="1" Grid.Row="6" x:Name="NewPackage_ShippingAddress_Country" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Miasto:" Grid.Column="0" Grid.Row="7" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="1" Grid.Row="7" x:Name="NewPackage_ShippingAddress_City" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Ulica:" Grid.Column="0" Grid.Row="8" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="1" Grid.Row="8" x:Name="NewPackage_ShippingAddress_Street" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Numer domu:" Grid.Column="0" Grid.Row="9" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="1" Grid.Row="9" x:Name="NewPackage_ShippingAddress__Number" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Kod pocztowy:" Grid.Column="0" Grid.Row="10" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox  Grid.Column="1" Grid.Row="10" x:Name="NewPackage_ShippingAddress_PostalCode" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Województwo:" Grid.Column="0" Grid.Row="11" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="1" Grid.Row="11" x:Name="NewPackage_ShippingAddress_State" Style="{StaticResource EditDialogTextBox}" />
+        
+        <StackPanel Grid.Row="12" Grid.ColumnSpan="2" Grid.Column="0" FlowDirection="RightToLeft" Orientation="Horizontal">
+            <Button x:Name="Cancel" Style="{StaticResource EditDialogButton}" Content="Anuluj" />
+            <Button x:Name="Save"  Style="{StaticResource AddPackageSaveButton}" Content="Zapisz" />
+        </StackPanel>
+    </Grid>
+</UserControl>
+
+

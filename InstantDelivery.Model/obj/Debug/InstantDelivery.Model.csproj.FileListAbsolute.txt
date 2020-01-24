@@ -1,0 +1,11 @@
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\bin\Debug\InstantDelivery.Model.dll.config
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\bin\Debug\InstantDelivery.Model.dll
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\bin\Debug\InstantDelivery.Model.pdb
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\bin\Debug\InstantDelivery.Common.dll
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\bin\Debug\InstantDelivery.Common.pdb
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\obj\Debug\InstantDelivery.Model.csprojAssemblyReference.cache
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\obj\Debug\InstantDelivery.Model.csproj.CopyComplete
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\obj\Debug\InstantDelivery.Model.dll
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Model\obj\Debug\InstantDelivery.Model.pdb

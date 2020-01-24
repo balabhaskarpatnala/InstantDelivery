@@ -1,0 +1,50 @@
+﻿<controls:MetroWindow x:Class="InstantDelivery.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:dialogs="clr-namespace:InstantDelivery.ViewModel.Dialogs;assembly=InstantDelivery.ViewModel"
+        mc:Ignorable="d"
+        Title="ShellView" x:Name="Window" Icon="../icon.ico">
+    <controls:MetroWindow.RightWindowCommands>
+        <controls:WindowCommands>
+            <Button cal:Message.Attach="Logout()" cal:Action.TargetWithoutContext="{Binding Path=DataContext, RelativeSource={RelativeSource Self}}">
+                <StackPanel Orientation="Horizontal">
+                    <Rectangle Width="17" Height="17" 
+                   Fill="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}">
+                        <Rectangle.OpacityMask>
+                            <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_power}" />
+                        </Rectangle.OpacityMask>
+                    </Rectangle>
+                    <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="Wyloguj" />
+                </StackPanel>
+            </Button>
+        </controls:WindowCommands>
+    </controls:MetroWindow.RightWindowCommands>
+    <controls:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <Grid Width="{TemplateBinding Width}"
+                 Height="{TemplateBinding Height}"
+                 Margin="4"
+                 Background="Transparent"
+                 RenderOptions.EdgeMode="Aliased"
+                 RenderOptions.BitmapScalingMode="HighQuality">
+                <Rectangle>
+                    <Rectangle.Fill>
+                        <VisualBrush Visual="{DynamicResource appbar_box}" />
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+        </DataTemplate>
+    </controls:MetroWindow.IconTemplate>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Resources/Icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <controls:TransitioningContentControl x:Name="ActiveItem" Transition="Left" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+</controls:MetroWindow>

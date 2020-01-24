@@ -1,0 +1,118 @@
+﻿<controls:MetroWindow x:Class="InstantDelivery.Views.PackageEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:controls1="clr-namespace:InstantDelivery.Controls"
+        xmlns:converters="clr-namespace:InstantDelivery.Converters"
+        Height="800" Width="750" WindowStartupLocation="CenterOwner"
+         Style="{StaticResource DialogWindow}">
+    <Window.Resources>
+        <converters:StatusToEmployeesGridVisibilityConverter x:Key="StatusToGridVisibility" />
+        <converters:StatusToInDeliveryVisibilityConverter x:Key="StatusToDeliveredCheckboxVisibility" />
+    </Window.Resources>
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  />
+            <ColumnDefinition  />
+            <ColumnDefinition />
+            <ColumnDefinition  />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Waga:" Grid.Column="0" Grid.Row="0"  Style="{StaticResource EditDialogLabel}" />
+        <TextBox cal:Message.Attach="[Event TextChanged] = [Action RefreshCost()]" Grid.Column="1" Grid.Row="0" x:Name="Package_Weight" Style="{StaticResource EditDialogTextBox}"
+                 IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <Label Content="Wysokość:" Grid.Column="2" Grid.Row="0"  Style="{StaticResource EditDialogLabel}"  />
+        <TextBox cal:Message.Attach="[Event TextChanged] = [Action RefreshCost()]" Grid.Column="3" Grid.Row="0" x:Name="Package_Height" Style="{StaticResource EditDialogTextBox}"
+                 IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <Label Content="Szerokość:" Grid.Column="0" Grid.Row="1"  Style="{StaticResource EditDialogLabel}"  />
+        <TextBox cal:Message.Attach="[Event TextChanged] = [Action RefreshCost()]" Grid.Column="1" Grid.Row="1" x:Name="Package_Width" Style="{StaticResource EditDialogTextBox}"
+                 IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <Label Content="Długość:" Grid.Column="2" Grid.Row="1"  Style="{StaticResource EditDialogLabel}"  />
+        <TextBox cal:Message.Attach="[Event TextChanged] = [Action RefreshCost()]" Grid.Column="3" Grid.Row="1" x:Name="Package_Length" Style="{StaticResource EditDialogTextBox}" 
+                 IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <Label Content="Status:" Grid.Column="0" Grid.Row="2" Style="{StaticResource EditDialogLabel}"  />
+        <Label Grid.Column="1" Grid.Row="2" Content="{Binding Package.Status, Converter={StaticResource EnumToDescription}}" Style="{StaticResource EditDialogLabel}" 
+                 x:Name="Package_Status" />
+
+        <Label Content="Koszt:" Grid.Column="0" Grid.Row="3" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox IsReadOnly="True" Grid.Column="1" Grid.Row="3" x:Name="Package_Cost" Style="{StaticResource EditDialogTextBox}" />
+
+        <Label Content="Kraj:" Grid.Column="0" Grid.Row="4" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="1" Grid.Row="4" x:Name="Package_ShippingAddress_Country" Style="{StaticResource EditDialogTextBox}"
+                 IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <Label Content="Miasto:" Grid.Column="2" Grid.Row="4" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="3" Grid.Row="4" x:Name="Package_ShippingAddress_City" Style="{StaticResource EditDialogTextBox}"
+                 IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <Label Content="Ulica:" Grid.Column="0" Grid.Row="5" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="1" Grid.Row="5" x:Name="Package_ShippingAddress_Street" Style="{StaticResource EditDialogTextBox}" 
+                 IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <Label Content="Numer domu:" Grid.Column="2" Grid.Row="5" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="3" Grid.Row="5" x:Name="Package_ShippingAddress__Number" Style="{StaticResource EditDialogTextBox}" 
+                 IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <Label Content="Kod pocztowy:" Grid.Column="0" Grid.Row="6" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox  Grid.Column="1" Grid.Row="6" x:Name="Package_ShippingAddress_PostalCode" Style="{StaticResource EditDialogTextBox}" 
+                  IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <Label Content="Województwo:" Grid.Column="2" Grid.Row="6" Style="{StaticResource EditDialogLabel}"  />
+        <TextBox Grid.Column="3" Grid.Row="6" x:Name="Package_ShippingAddress_State" Style="{StaticResource EditDialogTextBox}"
+                 IsReadOnly="{Binding IsPackageDataReadOnly}"/>
+
+        <!--<Label Content="Imię dostarczającego:" Grid.Column="0" Grid.Row="7"  Style="{StaticResource EditDialogLabel}" />
+        <Label Grid.Column="1" Grid.Row="7" x:Name="SelectedEmployee_FirstName" Style="{StaticResource EditDialogLabel}" />
+
+        <Label Content="Nazwisko dostarczającego:" Grid.Column="2" Grid.Row="7"  Style="{StaticResource EditDialogLabel}"  />
+        <Label Grid.Column="3" Grid.Row="7" x:Name="SelectedEmployee_LastName" Style="{StaticResource EditDialogLabel}" />-->
+
+        <CheckBox Grid.Row="8" Grid.Column="3" x:Name="IsDelivered" Visibility="{Binding Package.Status, Converter={StaticResource StatusToDeliveredCheckboxVisibility}}">
+            Dostarczona
+        </CheckBox>
+
+        <DataGrid Margin="0 5 0 0" IsReadOnly="True" SelectionMode="Single" ItemsSource="{Binding Employees, IsAsync=True}" 
+                  Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="4"
+                  AutoGenerateColumns="False" CanUserAddRows="False" CanUserReorderColumns="True" CanUserResizeColumns="True"
+                  CanUserResizeRows="False" CanUserSortColumns="False"
+                  EnableRowVirtualization="True" SelectedItem="{Binding SelectedEmployee, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                  Visibility="{Binding Package.Status, Converter={StaticResource StatusToGridVisibility}}"
+                  VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Imię" Binding="{Binding FirstName}" Width="220" />
+                <DataGridTextColumn Header="Nazwisko" Binding="{Binding LastName}" Width="220" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <controls1:DataPager Grid.Row="13" Grid.ColumnSpan="4" Grid.Column="0" CurrentPage="{Binding CurrentPage, Mode=TwoWay}" PageCount="{Binding PageCount, Mode=TwoWay}"
+                             PageSize="{Binding PageSize, Mode=TwoWay}" 
+                              Visibility="{Binding Package.Status, Converter={StaticResource StatusToGridVisibility}}"/>
+
+        <StackPanel Grid.Row="14" Grid.ColumnSpan="4" Grid.Column="0" FlowDirection="RightToLeft" Orientation="Horizontal">
+            <Button x:Name="Cancel" Style="{StaticResource EditDialogButton}" Content="Anuluj" />
+            <Button x:Name="Save"  Style="{StaticResource AddPackageSaveButton}" Content="Zapisz" />
+        </StackPanel>
+    </Grid>
+</controls:MetroWindow>
+

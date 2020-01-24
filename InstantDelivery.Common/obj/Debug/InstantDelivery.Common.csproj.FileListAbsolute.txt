@@ -1,0 +1,4 @@
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Common\bin\Debug\InstantDelivery.Common.dll
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Common\bin\Debug\InstantDelivery.Common.pdb
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Common\obj\Debug\InstantDelivery.Common.dll
+C:\Users\P0151407\Source\Repos\mchudy\InstantDelivery\InstantDelivery.Common\obj\Debug\InstantDelivery.Common.pdb

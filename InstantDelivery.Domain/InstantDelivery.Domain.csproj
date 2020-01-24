@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35820C01-CD0A-42F3-9E39-3B6D7F0C8D66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InstantDelivery.Domain</RootNamespace>
+    <AssemblyName>InstantDelivery.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Package.cs" />
+    <Compile Include="Entities\PackageEvent.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\Vehicle.cs" />
+    <Compile Include="Entities\VehicleModel.cs" />
+    <Compile Include="Extensions\IQueryableExtensions.cs" />
+    <Compile Include="InstantDeliveryContext.cs" />
+    <Compile Include="Migrations\201511062238275_InitialCreate.cs" />
+    <Compile Include="Migrations\201511062238275_InitialCreate.Designer.cs">
+      <DependentUpon>201511062238275_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511071315597_CascadeSetNullDelete.cs" />
+    <Compile Include="Migrations\201511071315597_CascadeSetNullDelete.Designer.cs">
+      <DependentUpon>201511071315597_CascadeSetNullDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511071854184_VehicleModelValidation.cs" />
+    <Compile Include="Migrations\201511071854184_VehicleModelValidation.Designer.cs">
+      <DependentUpon>201511071854184_VehicleModelValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511081054317_RequiredInPackage.cs" />
+    <Compile Include="Migrations\201511081054317_RequiredInPackage.Designer.cs">
+      <DependentUpon>201511081054317_RequiredInPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511081058095_RequiredInPackageOff.cs" />
+    <Compile Include="Migrations\201511081058095_RequiredInPackageOff.Designer.cs">
+      <DependentUpon>201511081058095_RequiredInPackageOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512051357512_AddIdentity.cs" />
+    <Compile Include="Migrations\201512051357512_AddIdentity.Designer.cs">
+      <DependentUpon>201512051357512_AddIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512061708017_AddEmployeeUserRelation.cs" />
+    <Compile Include="Migrations\201512061708017_AddEmployeeUserRelation.Designer.cs">
+      <DependentUpon>201512061708017_AddEmployeeUserRelation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512091755497_AddPackageHistory.cs" />
+    <Compile Include="Migrations\201512091755497_AddPackageHistory.Designer.cs">
+      <DependentUpon>201512091755497_AddPackageHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512112059594_PackageHistory_OnDeleteSetNull.cs" />
+    <Compile Include="Migrations\201512112059594_PackageHistory_OnDeleteSetNull.Designer.cs">
+      <DependentUpon>201512112059594_PackageHistory_OnDeleteSetNull.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601180928344_CustomerTable_SenderRecipientInPackage.cs" />
+    <Compile Include="Migrations\201601180928344_CustomerTable_SenderRecipientInPackage.Designer.cs">
+      <DependentUpon>201601180928344_CustomerTable_SenderRecipientInPackage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601181240256_CustomerEntity.cs" />
+    <Compile Include="Migrations\201601181240256_CustomerEntity.Designer.cs">
+      <DependentUpon>201601181240256_CustomerEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601241853016_AddRank.cs" />
+    <Compile Include="Migrations\201601241853016_AddRank.Designer.cs">
+      <DependentUpon>201601241853016_AddRank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201511062238275_InitialCreate.resx">
+      <DependentUpon>201511062238275_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511071315597_CascadeSetNullDelete.resx">
+      <DependentUpon>201511071315597_CascadeSetNullDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511071854184_VehicleModelValidation.resx">
+      <DependentUpon>201511071854184_VehicleModelValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511081054317_RequiredInPackage.resx">
+      <DependentUpon>201511081054317_RequiredInPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511081058095_RequiredInPackageOff.resx">
+      <DependentUpon>201511081058095_RequiredInPackageOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512051357512_AddIdentity.resx">
+      <DependentUpon>201512051357512_AddIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512061708017_AddEmployeeUserRelation.resx">
+      <DependentUpon>201512061708017_AddEmployeeUserRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512091755497_AddPackageHistory.resx">
+      <DependentUpon>201512091755497_AddPackageHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512112059594_PackageHistory_OnDeleteSetNull.resx">
+      <DependentUpon>201512112059594_PackageHistory_OnDeleteSetNull.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601180928344_CustomerTable_SenderRecipientInPackage.resx">
+      <DependentUpon>201601180928344_CustomerTable_SenderRecipientInPackage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601181240256_CustomerEntity.resx">
+      <DependentUpon>201601181240256_CustomerEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601241853016_AddRank.resx">
+      <DependentUpon>201601241853016_AddRank.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InstantDelivery.Common\InstantDelivery.Common.csproj">
+      <Project>{8202F229-FBDC-4F20-AAAA-7725AB893FC5}</Project>
+      <Name>InstantDelivery.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
