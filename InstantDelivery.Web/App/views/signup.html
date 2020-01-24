@@ -1,0 +1,163 @@
+﻿<div class="container">
+    <form class="form-horizontal" name="signupForm" novalidate>
+        <h3>Dołącz do Instant Delivery</h3>
+        <br>
+        <div class="form-group" ng-class="{ 'has-error': signupForm.userName.$touched && signupForm.userName.$invalid }">
+            <label class="col-sm-3 control-label">Nazwa użytkownika</label>
+            <div class="col-sm-9">
+                <input type="text" name="userName" placeholder="Nazwa użytkownika" class="form-control" autofocus
+                       ng-model="signupData.userName" required>
+                <div class="help-block" ng-messages="signupForm.userName.$error" ng-if="signupForm.userName.$touched && signupForm.userName.$invalid">
+                    <p ng-message="required">To pole jest wymagane</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': signupForm.firstName.$touched && signupForm.firstName.$invalid }">
+            <label class="col-sm-3 control-label">Imię</label>
+            <div class="col-sm-9">
+                <input type="text" name="firstName" placeholder="Imię" class="form-control" required
+                       ng-model="signupData.firstName">
+                <div class="help-block" ng-messages="signupForm.firstName.$error" ng-if="signupForm.firstName.$touched && signupForm.firstName.$invalid">
+                    <p ng-message="required">To pole jest wymagane</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': signupForm.lastName.$touched && signupForm.lastName.$invalid }">
+            <label class="col-sm-3 control-label">Nazwisko</label>
+            <div class="col-sm-9">
+                <input type="text" name="lastName" placeholder="Nazwisko" class="form-control" required
+                       ng-model="signupData.lastName">
+                <div class="help-block" ng-messages="signupForm.lastName.$error" ng-if="signupForm.lastName.$touched && signupForm.lastName.$invalid">
+                    <p ng-message="required">To pole jest wymagane</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': signupForm.email.$touched && signupForm.email.$invalid }">
+            <label class="col-sm-3 control-label">Email</label>
+            <div class="col-sm-9">
+                <input type="email" name="email" placeholder="Email" class="form-control" required
+                       ng-model="signupData.email">
+                <div class="help-block" ng-messages="signupForm.email.$error" ng-if="signupForm.email.$touched && signupForm.email.$invalid">
+                    <p ng-message="required">To pole jest wymagane</p>
+                    <p ng-message="email">Wprowadź poprawny adres email</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Numer telefonu</label>
+            <div class="col-sm-9">
+                <input type="text" placeholder="Numer telefonu" class="form-control" 
+                       ng-model="signupData.phoneNumber">
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': signupForm.password.$touched && signupForm.password.$invalid }">
+            <label class="col-sm-3 control-label">Hasło</label>
+            <div class="col-sm-9">
+                <input type="password" name="password" placeholder="Hasło" class="form-control" required
+                       ng-model="signupData.password" ng-minlength="6">
+                <div class="help-block" ng-messages="signupForm.password.$error" ng-if="signupForm.password.$touched && signupForm.password.$invalid">
+                    <p ng-message="required">To pole jest wymagane</p>
+                    <p ng-message="minlength">Hasło musi składać się z co najmniej 6 znaków</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': signupForm.confirmPassword.$touched && signupForm.confirmPassword.$invalid }">
+            <label class="col-sm-3 control-label">Potwierdź hasło</label>
+            <div class="col-sm-9">
+                <input type="password" name="confirmPassword" placeholder="Potwierdź hasło" class="form-control" required
+                       ng-model="signupData.confirmPassword" input-match="signupData.password">
+                <div class="help-block" ng-messages="signupForm.confirmPassword.$error" 
+                     ng-if="signupForm.confirmPassword.$touched && signupForm.confirmPassword.$invalid">
+                    <p ng-message="required">To pole jest wymagane</p>
+                    <p ng-message="match">Hasła muszą się zgadzać</p>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="birthDate" class="col-sm-3 control-label">Data urodzenia</label>
+            <div class="col-sm-3">
+                <input type="date" id="birthDate" class="form-control" 
+                       ng-model="signupData.dateOfBirth">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3">Płeć</label>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="radio-inline">
+                            <input type="radio" value="male" ng-model="signupData.gender" checked>Mężczyzna
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="radio-inline">
+                            <input type="radio" value="female" ng-model="signupData.gender">Kobieta
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label">Ulica</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" ng-model="signupData.address.street">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Numer domu</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" ng-model="signupData.address.number">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Kod pocztowy</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" ng-model="signupData.address.postalCode">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Miejscowość</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" ng-model="signupData.address.city">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Województwo</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" ng-model="signupData.address.state">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Kraj</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" ng-model="signupData.address.country">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+                <div class="alert alert-danger" ng-show="message">{{message}}</div>
+                <button type="submit" class="btn btn-primary btn-block" ng-click="signup(signupForm.$valid)">
+                    Zarejestruj się
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

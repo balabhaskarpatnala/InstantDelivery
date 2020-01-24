@@ -1,0 +1,29 @@
+﻿<div class="datatable col-md-10 col-md-offset-1" id="datatable">
+    <h3>Moje przesyłki</h3>
+    <table class="table table-striped table-condensed table-hover">
+        <thead>
+        <tr>
+            <th>Numer</th>
+            <th>Status</th>
+            <th>Adres</th>
+            <th>Waga</th>
+            <th>Wymiary</th>
+        </tr>
+        <tbody>
+        <tr dir-paginate="package in packages | itemsPerPage: packagesPerPage" total-items="totalPackages" current-page="pagination.current">
+            <td>{{package.id}}</td>
+            <td>{{package.statusDescription}}</td>
+            <td>
+                {{package.shippingAddress.street}} {{package.shippingAddress.number}} <br>
+                {{package.shippingAddress.postalCode}} {{package.shippingAddress.city}}, {{package.shippingAddress.country}}
+            </td>
+            <td>{{package.weight}} kg</td>
+            <td>{{package.length}}x{{package.width}}x{{package.height}} [mm]</td>
+
+        </tr>
+        </tbody>
+    </table>
+    <div class="col-md-2 col-md-offset-5">
+        <dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>
+    </div>
+</div>

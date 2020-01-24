@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section Scripts
+{
+    <script>
+        $('.carousel').carousel({
+            interval: 15000
+        });
+    </script>
+}
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="fill" style="background-image: url('../../Content/Resources/img3.jpg');"></div>
+            <div class="carousel-caption">
+                <h1>Instant Delivery - dostarczymy twoje paczki do celu!</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image: url('../../Content/Resources/img2.jpg');"></div>
+            <div class="carousel-caption">
+                <h1>Poznaj naszą firmę - @Html.ActionLink("Kliknij tutaj", "About", "Home", null)</h1>
+            </div>
+        </div>
+        <div class="item">
+            <div class="fill" style="background-image: url('../../Content/Resources/img1.jpg');"></div>
+            <div class="carousel-caption">
+                <h1>
+                    Dla nas każdy klient jest ważny
+                </h1>
+            </div>
+        </div>
+    </div>
+
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</div>
+
+<div class="section">
+
+    <div class="container" id="main-links">
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+                <h3><i class="fa fa-location-arrow"></i> Śledź przesyłkę</h3>
+                <p>
+                    Bądź na bieżąco. Sprawdź aktualny stan swojej przesyłki.
+                </p>
+                @using (Html.BeginForm("Track", "Package", FormMethod.Get))
+                {
+                    <div class="input-group">
+                        <input type="search" name="packageId" placeholder="Numer przesyłki..." class="form-control" id="track-package" />
+                        <div class="input-group-btn">
+                            <button class="btn btn-info">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <h3>
+                    <i class="fa fa-pencil"></i> Oblicz koszt przesyłki
+                </h3>
+                <p>Przejdź do formularza umożliwiającego obliczenie kosztu przesyłki</p>
+                @Html.ActionLink("Oblicz koszt przesyłki", "Cost", "Package", null, new { @class = "btn btn-primary center-block" })
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <h3>
+                    <i class="fa fa-folder-open"></i> Załóż konto
+                </h3>
+                <p>Konto klienta Instant Delivery umożliwia nadawanie paczek przez Internet.</p>
+                @Html.ActionLink("Przejdź do portalu", "Index", "Portal", null, new { @class = "btn btn-primary center-block" })
+            </div>
+        </div>
+    </div>
+
+    <div class="section-colored">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <ul class="list-unstyled selling-points">
+                        <li>Zapewniamy kompleksowe dostawy dla klientów indywidualnych</li>
+                        <li>Jesteśmy młodą rozwijającą się firmą</li>
+                        <li>Zadowolenie klienta jest naszym priorytetem</li>
+                        <li>Cenimy sobie szybkość działania</li>
+                        <li>Chętnie przyjmujemy uwagi od klientów na temat usług</li>
+                        <li>Zapraszamy do skorzystania z naszych usług!</li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <img class="img-responsive" src="../../Content/Resources/img4.jpg">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

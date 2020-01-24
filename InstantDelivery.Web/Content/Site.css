@@ -1,0 +1,226 @@
+﻿/* 
+Custom CSS for...
+'Modern Business' HTML Theme by Start Bootstrap
+
+All Start Bootstrap themes are licensed under Apache 2.0. 
+For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
+*/
+
+html, body {
+    height: 100%;
+}
+
+.tab-pane {
+    margin-top: 15px;
+}
+
+.section,
+.section-colored {
+    padding: 50px 0;
+}
+
+.section-colored {
+    background-color: #e1e1e1;
+}
+
+.sidebar {
+    margin-top: 40px;
+}
+
+    .sidebar ul {
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid #cccccc;
+    }
+
+.carousel {
+    height: 50%;
+}
+
+.item,
+.active,
+.carousel-inner {
+    height: 100%;
+}
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+@media (max-width: 767px) {
+    .carousel {
+        height: 70%;
+        /* increases the carousel height so it looks good on phones */
+    }
+}
+
+#track-package {
+    height: 39px;
+}
+
+#sidebar {
+    background: #008cba;
+    color: #eee;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    overflow: hidden;
+    left: 0;
+    margin: 0;
+    -moz-transition: left ease .25s;
+    -o-transition: left ease .25s;
+    -webkit-transition: left ease .25s;
+    transition: left ease .25s;
+}
+
+    #sidebar.hide-sidebar {
+        left: -250px;
+        -moz-transition: left ease .25s;
+        -o-transition: left ease .25s;
+        -webkit-transition: left ease .25s;
+        transition: left ease .25s;
+    }
+
+    #sidebar a {
+        color: #eee;
+    }
+
+        #sidebar a:hover, #sidebar a:visited, #sidebar a:focus {
+            background: #006687;
+        }
+
+#wrapper {
+    margin: 0 0 0 250px;
+    -moz-transition: margin-left ease .25s;
+    -o-transition: margin-left ease .25s;
+    -webkit-transition: margin-left ease .25s;
+    transition: margin-left ease .25s;
+}
+
+    #wrapper.hide-sidebar {
+        margin-left: 0;
+        -moz-transition: margin-left ease .25s;
+        -o-transition: margin-left ease .25s;
+        -webkit-transition: margin-left ease .25s;
+        transition: margin-left ease .25s;
+    }
+
+#sidebar-toggle {
+    margin-left: -15px;
+    margin-right: 5px;
+}
+
+    #sidebar-toggle:visited, #sidebar-toggle:focus {
+        background: #008cba;
+    }
+
+    #sidebar-toggle:hover {
+        background: #006687;
+    }
+
+    #sidebar-toggle i {
+        font-size: 1.15em;
+    }
+
+
+.login-form {
+    max-width: 540px;
+    margin: 100px auto;
+    font: 14px/2em Lato, serif;
+    color: #626161;
+    background: #fff;
+    border-radius: 5px;
+}
+
+    .login-form div.outer {
+        padding: 15px 35px 20px 35px;
+    }
+
+    .login-form section {
+        border-top: 1px solid #ccc;
+        padding: 15px 35px;
+    }
+
+    .login-form input,
+    .login-form button {
+        font-size: 14px;
+        margin: 12px 0;
+    }
+
+    .login-form input {
+        background: #fafafa;
+        border: 1px solid #EDEDED;
+    }
+
+        .login-form input::-webkit-input-placeholder,
+        .login-form input:-moz-placeholder,
+        .login-form input::-moz-placeholder,
+        .login-form input:-ms-input-placeholder {
+            color: #a0a0a0;
+        }
+
+    .login-form button {
+        line-height: 24px;
+        border: none;
+    }
+
+    .login-form .form-control {
+        padding-left: 35px;
+    }
+
+        .login-form .form-control + i {
+            position: absolute;
+            left: 0;
+            top: 24%;
+            padding: 8px 0 0 27px;
+        }
+
+#loading-bar .bar {
+    background: #fff;
+    height: 3px;
+}
+
+#loading-bar .peg {
+    -moz-box-shadow: #fff 1px 0 6px 1px;
+    -webkit-box-shadow: #fff 1px 0 6px 1px;
+    box-shadow: #fff 1px 0 6px 1px;
+    height: 3px;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+.input-validation-error {
+    border: 1px solid red;
+}
+
+.package-cost {
+    color: #008000;
+    font-size: 25px;
+}
+
+.list-unstyled.selling-points li {
+  background: url('http://d26mw3lpqa99qj.cloudfront.net/prod-fool/sell/yes-15d4ba569f9f4beb7d8cfd8adc8ed886.png') no-repeat;
+  padding:0 0 5% 45px;
+}
+
+#main-links {
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+
+.row-offset-small {
+    margin-top: 0.5em;
+}
+
+.row-offset-large {
+    margin-top: 2em;
+}

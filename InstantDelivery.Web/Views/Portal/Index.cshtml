@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="pl">
+<head>
+    <title>Instant Delivery</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <base href="/portal/">
+    <link rel="stylesheet" href="~/Content/loading-bar.min.css" type="text/css">
+    @Styles.Render("~/Content/css")
+</head>
+<body ng-app="app" ng-controller="MainController">
+    <div id="sidebar" ng-class="{'hide-sidebar': hideSidebar || !loggedIn()}"
+         class="hide-sidebar">
+        <ul class="nav">
+            <li><a href="packages">Moje przesyłki</a></li>
+            <li><a href="sendPackage/address">Nadaj paczkę</a></li>
+            <li><a href="statistics">Statystyki</a></li>
+            <li><a href="profile">Mój profil</a></li>
+        </ul>
+    </div>
+    <div id="wrapper" ng-class="{'hide-sidebar': hideSidebar || !loggedIn()}" class="hide-sidebar">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <a href="#" id="sidebar-toggle" ng-click="hideSidebar = !hideSidebar"
+                           ng-show="loggedIn()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a class="navbar-brand" href="/">Instant Delivery</a>
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right text-center">
+                        <li ng-click="logOut()" ng-show="loggedIn()">
+                            <a href="#">Wyloguj</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="main" class="container-fluid">
+            <div ng-view></div>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/portal")
+</body>
+</html>
