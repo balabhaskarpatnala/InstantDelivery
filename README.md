@@ -24,7 +24,7 @@ Update-Database -ProjectName InstantDelivery.Domain -StartUpProject InstantDeliv
 ```
 You might also want to update the API service URL in `InstantDelivery.Web/App/app.js` and `InstantDelivery.Presentation/App.config`.
 
-#### Sending email notifications
+#### Sending email notifications test
 The system is configured to send email notifications to its users. For it to work, you'll need to add a file named `AppSettingsSecrets.config` to the root folder of the InstantDelivery.Service project and include your Gmail credentials inside:
 ```xml
 <appSettings>
